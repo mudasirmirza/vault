@@ -78,14 +78,15 @@ func whitelistIdentityEntry(ctx context.Context, s logical.Storage, instanceID s
 // Stores an instance ID and the information required to validate further login/renewal attempts from
 // the same instance ID.
 func setWhitelistIdentityEntry(ctx context.Context, s logical.Storage, instanceID string, identity *whitelistIdentity) error {
-	entry, err := logical.StorageEntryJSON("whitelist/identity/"+instanceID, identity)
-	if err != nil {
-		return err
-	}
-
-	if err := s.Put(ctx, entry); err != nil {
-		return err
-	}
+	//entry, err := logical.StorageEntryJSON("whitelist/identity/"+instanceID, identity)
+	//if err != nil {
+	//	return err
+	//}
+	//
+	//if err := s.Put(ctx, entry); err != nil {
+	//	return err
+	//}
+	//return nil
 	return nil
 }
 
